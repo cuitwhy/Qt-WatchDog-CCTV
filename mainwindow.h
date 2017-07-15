@@ -2,6 +2,12 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <qtvideo.h>
+#include <string>
+
+using namespace std;
+
+class QtVideo;
 
 namespace Ui {
 class MainWindow;
@@ -14,6 +20,7 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
+    QtVideo *video = new QtVideo();
 
 private:
     Ui::MainWindow *ui;

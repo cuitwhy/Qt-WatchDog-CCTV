@@ -1,3 +1,9 @@
+/********************************************
+ * Qt5.8
+ * CCTV,video monitor,watchdog
+ * By:Why
+ * 2017.07.15
+ *******************************************/
 #include "mainwindow.h"
 #include <QApplication>
 

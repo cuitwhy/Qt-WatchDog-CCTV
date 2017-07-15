@@ -6,6 +6,11 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    foreach (string &cameraname, video->m_vCameraNames)
+    {
+        ui->DebugtextBrowser->append(cameraname);
+    }
 }
 
 MainWindow::~MainWindow()
