@@ -25,7 +25,8 @@ public:
     QtVideo();
     ~QtVideo();
 
-    std::vector<QString> m_vCameraNames;
+    std::vector<QCameraInfo> m_vCameraNames;
+    bool openCamera(QString);
 
 };
 

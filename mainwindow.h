@@ -22,6 +22,9 @@ public:
     ~MainWindow();
     QtVideo *video = new QtVideo();
 
+private slots:
+    void on_openButton1_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
