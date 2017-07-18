@@ -6,9 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1097</width>
-    <height>712</height>
+    <width>1047</width>
+    <height>730</height>
    </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>10000</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>Qt-WatchDog(CCTV)</string>
@@ -22,7 +28,7 @@
     <item row="0" column="0">
      <layout class="QHBoxLayout" name="videolabel">
       <item>
-       <widget class="QLabel" name="videolabel_1">
+       <widget class="QLabel" name="videolabel1">
         <property name="font">
          <font>
           <family>Arial</family>
@@ -38,7 +44,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QLabel" name="videolabel_2">
+       <widget class="QLabel" name="videolabel2">
         <property name="font">
          <font>
           <family>Arial</family>
@@ -54,7 +60,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QLabel" name="videolabel_3">
+       <widget class="QLabel" name="videolabel3">
         <property name="font">
          <font>
           <family>Arial</family>
@@ -72,10 +78,10 @@
      </layout>
     </item>
     <item row="2" column="0">
-     <layout class="QHBoxLayout" name="horizontalLayout"/>
-    </item>
-    <item row="1" column="0">
      <layout class="QHBoxLayout" name="videoView">
+      <property name="topMargin">
+       <number>300</number>
+      </property>
       <item>
        <layout class="QHBoxLayout" name="videoView1"/>
       </item>
@@ -88,7 +94,42 @@
      </layout>
     </item>
     <item row="3" column="0">
-     <widget class="QTextBrowser" name="DebugtextBrowser"/>
+     <widget class="QTextBrowser" name="DebugtextBrowser">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>10000</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <layout class="QHBoxLayout" name="buttonvector">
+      <property name="topMargin">
+       <number>10</number>
+      </property>
+      <item>
+       <widget class="QPushButton" name="openButton1">
+        <property name="text">
+         <string>PushButton</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="openButton2">
+        <property name="text">
+         <string>PushButton</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="openButton3">
+        <property name="text">
+         <string>PushButton</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </item>
    </layout>
   </widget>
@@ -97,7 +138,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1097</width>
+     <width>1047</width>
      <height>23</height>
     </rect>
    </property>

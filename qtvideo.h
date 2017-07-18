@@ -7,11 +7,13 @@
 #define QTVIDEO_H
 
 #include <QCamera>
+#include <QCameraInfo>
 #include <QCameraViewfinder>
 #include <QCameraImageCapture>
 #include <QVideoWidget>
 #include <QFileDialog>
 
+#include <QList>
 #include <vector>
 #include <string>
 
@@ -23,9 +25,7 @@ public:
     QtVideo();
     ~QtVideo();
 
-    std::vector<string> m_vCameraNames;
-
-
+    std::vector<QString> m_vCameraNames;
 
 };
 
