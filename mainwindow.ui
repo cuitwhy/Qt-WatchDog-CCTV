@@ -77,28 +77,12 @@
       </item>
      </layout>
     </item>
-    <item row="2" column="0">
-     <layout class="QHBoxLayout" name="videoView">
-      <property name="topMargin">
-       <number>300</number>
-      </property>
-      <item>
-       <layout class="QHBoxLayout" name="videoView1"/>
-      </item>
-      <item>
-       <layout class="QHBoxLayout" name="videoView2"/>
-      </item>
-      <item>
-       <layout class="QHBoxLayout" name="videoView3"/>
-      </item>
-     </layout>
-    </item>
     <item row="3" column="0">
      <widget class="QTextBrowser" name="DebugtextBrowser">
       <property name="maximumSize">
        <size>
         <width>16777215</width>
-        <height>10000</height>
+        <height>5000</height>
        </size>
       </property>
      </widget>
@@ -131,6 +115,40 @@
       </item>
      </layout>
     </item>
+    <item row="2" column="0">
+     <layout class="QHBoxLayout" name="videoView">
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <layout class="QHBoxLayout" name="videoView1">
+        <property name="topMargin">
+         <number>300</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="videoView2">
+        <property name="topMargin">
+         <number>300</number>
+        </property>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="videoView3">
+        <property name="topMargin">
+         <number>300</number>
+        </property>
+        <property name="bottomMargin">
+         <number>0</number>
+        </property>
+       </layout>
+      </item>
+     </layout>
+    </item>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -139,7 +157,7 @@
      <x>0</x>
      <y>0</y>
      <width>1047</width>
-     <height>28</height>
+     <height>23</height>
     </rect>
    </property>
   </widget>
