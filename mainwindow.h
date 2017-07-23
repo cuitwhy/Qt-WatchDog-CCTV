@@ -23,10 +23,18 @@ public:
     QtVideo *video = new QtVideo();
     QCamera *camera1;
     QCameraViewfinder *viewfinder1;
+    QCamera *camera2;
+    QCameraViewfinder *viewfinder2;
+    QCamera *camera3;
+    QCameraViewfinder *viewfinder3;
 
 
 private slots:
     void on_openButton1_clicked();
+
+    void on_openButton2_clicked();
+
+    void on_openButton3_clicked();
 
 private:
     Ui::MainWindow *ui;
