@@ -10,6 +10,7 @@
 #include <QCameraInfo>
 #include <QCameraViewfinder>
 #include <QCameraImageCapture>
+#include <QMediaRecorder>
 #include <QVideoWidget>
 #include <QFileDialog>
 

@@ -18,10 +18,13 @@ MainWindow::~MainWindow()
     delete video;
     delete camera1;
     delete viewfinder1;
+    delete mediaRecorder1;
     delete camera2;
     delete viewfinder2;
+    delete mediaRecorder2;
     delete camera3;
     delete viewfinder3;
+    delete mediaRecorder3;
     delete ui;
 }
 
@@ -33,6 +36,10 @@ void MainWindow::on_openButton1_clicked()
         {
             camera1 = new QCamera(video->m_vCameraNames[0]);
             viewfinder1 = new QCameraViewfinder();
+            mediaRecorder1 = new QMediaRecorder(camera1);
+            mediaRecorder1->setOutputLocation(QUrl("/cam1/"));
+            ui->DebugtextBrowser->append(mediaRecorder1->outputLocation().toString());
+            mediaRecorder1->record();
             ui->videoView1->addWidget(viewfinder1);
             camera1->setViewfinder(viewfinder1);
             camera1->start();
@@ -42,8 +49,10 @@ void MainWindow::on_openButton1_clicked()
     else
     {
         camera1->stop();
+        mediaRecorder1->stop();
         delete camera1;
         delete viewfinder1;
+        delete mediaRecorder1;
         ui->openButton1->setText(tr("Open_Cam_1"));
     }
 }
@@ -56,6 +65,9 @@ void MainWindow::on_openButton2_clicked()
         {
             camera2 = new QCamera(video->m_vCameraNames[1]);
             viewfinder2 = new QCameraViewfinder();
+            mediaRecorder2 = new QMediaRecorder(camera2);
+            mediaRecorder2->setOutputLocation(QUrl("/cam2"));
+            mediaRecorder2->record();
             ui->videoView2->addWidget(viewfinder2);
             camera2->setViewfinder(viewfinder2);
             camera2->start();
@@ -65,8 +77,10 @@ void MainWindow::on_openButton2_clicked()
     else
     {
         camera2->stop();
+        mediaRecorder2->stop();
         delete camera2;
         delete viewfinder2;
+        delete mediaRecorder3;
         ui->openButton2->setText(tr("Open_Cam_2"));
     }
 }
@@ -79,6 +93,9 @@ void MainWindow::on_openButton3_clicked()
         {
             camera3 = new QCamera(video->m_vCameraNames[2]);
             viewfinder3 = new QCameraViewfinder();
+            mediaRecorder3 = new QMediaRecorder(camera3);
+            mediaRecorder3->setOutputLocation(QUrl("/cam3"));
+            mediaRecorder3->record();
             ui->videoView3->addWidget(viewfinder3);
             camera3->setViewfinder(viewfinder3);
             camera3->start();
@@ -88,8 +105,10 @@ void MainWindow::on_openButton3_clicked()
     else
     {
         camera3->stop();
+        mediaRecorder3->stop();
         delete camera3;
         delete viewfinder3;
+        delete mediaRecorder3;
         ui->openButton3->setText(tr("Open_Cam_3"));
     }
 }

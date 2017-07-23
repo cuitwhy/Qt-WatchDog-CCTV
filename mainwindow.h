@@ -23,10 +23,13 @@ public:
     QtVideo *video = new QtVideo();
     QCamera *camera1;
     QCameraViewfinder *viewfinder1;
+    QMediaRecorder *mediaRecorder1;
     QCamera *camera2;
     QCameraViewfinder *viewfinder2;
+    QMediaRecorder *mediaRecorder2;
     QCamera *camera3;
     QCameraViewfinder *viewfinder3;
+    QMediaRecorder *mediaRecorder3;
 
 
 private slots:
