@@ -38,7 +38,7 @@ void MainWindow::on_openButton1_clicked()
             viewfinder1 = new QCameraViewfinder();
             mediaRecorder1 = new QMediaRecorder(camera1);
             mediaRecorder1->setOutputLocation(QUrl("/cam1/"));
-            ui->DebugtextBrowser->append(mediaRecorder1->outputLocation().toString());
+            //ui->DebugtextBrowser->append(mediaRecorder1->outputLocation().toString());
             mediaRecorder1->record();
             ui->videoView1->addWidget(viewfinder1);
             camera1->setViewfinder(viewfinder1);
