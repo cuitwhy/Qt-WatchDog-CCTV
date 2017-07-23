@@ -21,6 +21,9 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
     QtVideo *video = new QtVideo();
+    QCamera *camera1;
+    QCameraViewfinder *viewfinder1;
+
 
 private slots:
     void on_openButton1_clicked();

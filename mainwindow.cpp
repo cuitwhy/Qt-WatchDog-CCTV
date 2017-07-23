@@ -15,6 +15,9 @@ MainWindow::MainWindow(QWidget *parent) :
 
 MainWindow::~MainWindow()
 {
+    delete video;
+    delete camera1;
+    delete viewfinder1;
     delete ui;
 }
 
@@ -22,10 +25,10 @@ void MainWindow::on_openButton1_clicked()
 {
     if (ui->openButton1->text() == "Open_Cam_1")
     {
-        if (video->m_vCameraNames.size())
+        if (video->m_vCameraNames.size() > 0)
         {
-            QCamera *camera1 = new QCamera(video->m_vCameraNames[0]);
-            QCameraViewfinder *viewfinder1 = new QCameraViewfinder();
+            camera1 = new QCamera(video->m_vCameraNames[0]);
+            viewfinder1 = new QCameraViewfinder();
             ui->videoView1->addWidget(viewfinder1);
             camera1->setViewfinder(viewfinder1);
             camera1->start();
@@ -34,6 +37,19 @@ void MainWindow::on_openButton1_clicked()
     }
     else
     {
-        ;
+        camera1->stop();
+        delete camera1;
+        delete viewfinder1;
+        ui->openButton1->setText(tr("Open_Cam_1"));
     }
+}
+
+void MainWindow::on_openButton2_clicked()
+{
+
+}
+
+void MainWindow::on_openButton3_clicked()
+{
+
 }

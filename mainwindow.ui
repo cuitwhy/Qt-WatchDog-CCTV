@@ -26,125 +26,83 @@
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0">
-     <layout class="QHBoxLayout" name="videolabel">
-      <item>
-       <widget class="QLabel" name="videolabel1">
-        <property name="font">
-         <font>
-          <family>Arial</family>
-          <pointsize>24</pointsize>
-         </font>
-        </property>
-        <property name="text">
-         <string>Cam_1</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="videolabel2">
-        <property name="font">
-         <font>
-          <family>Arial</family>
-          <pointsize>24</pointsize>
-         </font>
-        </property>
-        <property name="text">
-         <string>Cam_2</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLabel" name="videolabel3">
-        <property name="font">
-         <font>
-          <family>Arial</family>
-          <pointsize>24</pointsize>
-         </font>
-        </property>
-        <property name="text">
-         <string>Cam_3</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item row="3" column="0">
-     <widget class="QTextBrowser" name="DebugtextBrowser">
-      <property name="maximumSize">
-       <size>
-        <width>16777215</width>
-        <height>5000</height>
-       </size>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="0">
-     <layout class="QHBoxLayout" name="buttonvector">
-      <property name="topMargin">
-       <number>10</number>
-      </property>
-      <item>
-       <widget class="QPushButton" name="openButton1">
-        <property name="text">
-         <string>Open_Cam_1</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="openButton2">
-        <property name="text">
-         <string>Open_Cam_2</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="openButton3">
-        <property name="text">
-         <string>Open_Cam_3</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item row="2" column="0">
-     <layout class="QHBoxLayout" name="videoView">
-      <property name="topMargin">
-       <number>0</number>
-      </property>
-      <item>
-       <layout class="QHBoxLayout" name="videoView1">
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="1" column="0">
+       <layout class="QHBoxLayout" name="videoView">
         <property name="topMargin">
-         <number>300</number>
-        </property>
-        <property name="bottomMargin">
          <number>0</number>
         </property>
+        <item>
+         <layout class="QHBoxLayout" name="videoView1">
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="videoView2">
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="videoView3">
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+         </layout>
+        </item>
        </layout>
       </item>
-      <item>
-       <layout class="QHBoxLayout" name="videoView2">
-        <property name="topMargin">
-         <number>300</number>
+      <item row="2" column="0">
+       <widget class="QTextBrowser" name="DebugtextBrowser">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>100</height>
+         </size>
         </property>
-       </layout>
+       </widget>
       </item>
-      <item>
-       <layout class="QHBoxLayout" name="videoView3">
-        <property name="topMargin">
-         <number>300</number>
-        </property>
-        <property name="bottomMargin">
+      <item row="0" column="0">
+       <layout class="QHBoxLayout" name="buttonvector">
+        <property name="spacing">
          <number>0</number>
         </property>
+        <property name="topMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QPushButton" name="openButton1">
+          <property name="text">
+           <string>Open_Cam_1</string>
+          </property>
+          <property name="autoRepeatDelay">
+           <number>300</number>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="openButton2">
+          <property name="text">
+           <string>Open_Cam_2</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="openButton3">
+          <property name="text">
+           <string>Open_Cam_3</string>
+          </property>
+         </widget>
+        </item>
        </layout>
       </item>
      </layout>
