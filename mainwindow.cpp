@@ -36,13 +36,15 @@ void MainWindow::on_openButton1_clicked()
         {
             camera1 = new QCamera(video->m_vCameraNames[0]);
             viewfinder1 = new QCameraViewfinder();
-            mediaRecorder1 = new QMediaRecorder(camera1);
-            mediaRecorder1->setOutputLocation(QUrl("/cam1/"));
-            //ui->DebugtextBrowser->append(mediaRecorder1->outputLocation().toString());
-            mediaRecorder1->record();
+
             ui->videoView1->addWidget(viewfinder1);
+            camera1->setCaptureMode(QCamera::CaptureVideo);
             camera1->setViewfinder(viewfinder1);
             camera1->start();
+            mediaRecorder1 = new QMediaRecorder(camera1);
+            QString fileName = "test.mpeg2";
+            mediaRecorder1->setOutputLocation(QUrl::fromLocalFile(fileName));
+            mediaRecorder1->record();
             ui->openButton1->setText(tr("Close_Cam_1"));
         }
     }

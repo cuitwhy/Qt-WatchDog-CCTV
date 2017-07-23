@@ -13,6 +13,7 @@
 #include <QMediaRecorder>
 #include <QVideoWidget>
 #include <QFileDialog>
+#include <QVideoEncoderSettings>
 
 #include <QList>
 #include <vector>
