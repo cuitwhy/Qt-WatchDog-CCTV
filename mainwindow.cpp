@@ -42,7 +42,11 @@ void MainWindow::on_openButton1_clicked()
             camera1->setViewfinder(viewfinder1);
             camera1->start();
             mediaRecorder1 = new QMediaRecorder(camera1);
-            QString fileName = "test.mpeg2";
+            QAudioEncoderSettings audioSettings;
+            audioSettings.setCodec("audio/amr");
+            audioSettings.setQuality(QMultimedia::HighQuality);
+            mediaRecorder1->setAudioSettings(audioSettings);
+            QString fileName = "test.mp4";
             mediaRecorder1->setOutputLocation(QUrl::fromLocalFile(fileName));
             mediaRecorder1->record();
             ui->openButton1->setText(tr("Close_Cam_1"));
